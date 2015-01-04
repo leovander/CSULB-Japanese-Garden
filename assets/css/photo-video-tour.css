@@ -1,0 +1,349 @@
+/**
+ * Created by Kun Wei 
+ * Context: CSS sheet for photo-tour and video-tour page
+ * Team members: Beau Squires, Israel Torres, Gyngai Ung, Kun Wei
+ * Author #1: Kun Wei
+ * Author #2: Israel Torres
+ * Date: 2014/4/28
+ * Carousel plug-in from: http://bradsknutson.com/blog/css-responsive-carousel/
+ */
+
+.paragarph-space img {
+    float: right;
+    width: 30px;
+    height: 30px;
+}
+
+#top-pagination {
+	margin-top: 0px;
+	margin-bottom: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px; 
+}
+
+#top-pagination p {
+	display: inline;
+	color: #27408B;
+}
+
+#top-pagination li {
+	display: inline;
+	margin-left: 13px;
+}
+
+#top-pagination ul {
+	list-style-type: none;
+	display: inline;
+}
+
+#top-pagination a {
+    display: inline-block;
+    padding: 0px 5px;
+    padding-top: 3px;
+	padding-bottom: 3px;
+    text-decoration: none;
+   	color: black;
+	border-bottom: 1px solid #ff5600;
+}
+
+#top-pagination a:hover {
+	border-bottom: 3px solid #ff5600;
+	padding-bottom: 3px;
+}
+
+.intro-img {
+	width: 100%;
+	height: auto;
+}
+
+.left-panel-links ol {
+	margin-bottom: 20px;
+	list-style-type: decimal-leading-zero;
+}
+
+.left-panel-links ol li {
+	margin-bottom: 8px;
+}
+
+.active-section {
+	display: block !important;		
+}
+
+.tab {
+	display: none;
+}
+
+#side-pagination a {
+	text-decoration: none;
+	color: black;
+	border-bottom: 1px solid #ff5600;
+}
+
+#side-pagination a:hover {
+	border-bottom: 3px solid #ff5600;
+    margin-bottom: -3px;
+   
+}
+
+.css-img-5, .css-img-4, .css-img-3, .css-img-2 {
+    display: none;
+}
+
+.css-img-5:first-child, .css-img-4:first-child, .css-img-3:first-child, .css-img-2:first-child {
+    display: inline;
+}
+
+@media all and (min-width: 681px) {
+    /*carousel plug-in for 2 images ====================================*/
+    .css-carousel-2 {
+        width: 100%;
+        height: auto; /* Height of images */
+        position: relative;
+        clear: both;
+        float: left;
+    }
+
+    .css-img-2 {
+        display: inline;
+    }
+
+    .css-carousel-2 .css-img-2 {
+        max-width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        -webkit-animation: css-carousel-fade-2 8s linear infinite;
+        -moz-animation: css-carousel-fade-2 8s linear infinite;
+        -ms-animation: css-carousel-fade-2 8s linear infinite;
+        animation: css-carousel-fade-2 8s linear infinite;
+    }
+    .css-carousel-2 .css-img-2:nth-child(2) {
+        -webkit-animation-delay: 4s;
+        -moz-animation-delay: 4s;
+        -ms-animation-delay: 4s;
+        animation-delay: 4s;
+    }
+    @-webkit-keyframes css-carousel-fade-2 {
+        0% { opacity: 0; }
+        14.3%, 50% { opacity: 1; }
+        64.3%, 100% { opacity: 0; }
+    }
+    @-moz-keyframes css-carousel-fade-2 {
+        0% { opacity: 0; }
+        14.3%, 50% { opacity: 1; }
+        64.3%, 100% { opacity: 0; }
+    }
+    @-ms-keyframes css-carousel-fade-2 {
+        0% { opacity: 0; }
+        14.3%, 50% { opacity: 1; }
+        64.3%, 100% { opacity: 0; }
+    }
+    @keyframes css-carousel-fade-2 {
+        0% { opacity: 0; }
+        14.3%, 50% { opacity: 1; }
+        64.3%, 100% { opacity: 0; }
+    }
+    /*carousel plug-in for 2 images ====================================*/
+
+    /*carousel plug-in for 3 images ====================================*/
+    .css-carousel-3 {
+        width: 100%;
+        height: auto; /* Height of images */
+        position: relative;
+        clear: both;
+        float: left;
+    }
+
+    .css-img-3 {
+        display: inline;
+    }
+
+    .css-carousel-3 .css-img-3 {
+        max-width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        -webkit-animation: css-carousel-fade-3 12s linear infinite;
+        -moz-animation: css-carousel-fade-3 12s linear infinite;
+        -ms-animation: css-carousel-fade-3 12s linear infinite;
+        animation: css-carousel-fade-3 12s linear infinite;
+    }
+    .css-carousel-3 .css-img-3:nth-child(2) {
+        -webkit-animation-delay: 4s;
+        -moz-animation-delay: 4s;
+        -ms-animation-delay: 4s;
+        animation-delay: 4s;
+    }
+    .css-carousel-3 .css-img-3:nth-child(3) {
+        -webkit-animation-delay: 8s;
+        -moz-animation-delay: 8s;
+        -ms-animation-delay: 8s;
+        animation-delay: 8s;
+    }
+    @-webkit-keyframes css-carousel-fade-3 {
+        0% { opacity: 0; }
+        9.5%, 33.3% { opacity: 1; }
+        42.9%, 100% { opacity: 0; }
+    }
+    @-moz-keyframes css-carousel-fade-3 {
+        0% { opacity: 0; }
+        9.5%, 33.3% { opacity: 1; }
+        42.9%, 100% { opacity: 0; }
+    }
+    @-ms-keyframes css-carousel-fade-3 {
+        0% { opacity: 0; }
+        9.5%, 33.3% { opacity: 1; }
+        42.9%, 100% { opacity: 0; }
+    }
+    @keyframes css-carousel-fade-3 {
+        0% { opacity: 0; }
+        9.5%, 33.3% { opacity: 1; }
+        42.9%, 100% { opacity: 0; }
+    }
+    /*carousel plug-in for 3 images ====================================*/
+
+    /*carousel plug-in for 4 images ====================================*/
+    .css-carousel-4 {
+        width: 100%;
+        height: auto; /* Height of images */
+        position: relative;
+        clear: both;
+        float: left;
+    }
+
+    .css-img-4 {
+        display: inline;
+    }
+
+    .css-carousel-4 .css-img-4 {
+        max-width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        -webkit-animation: css-carousel-fade-4 16s linear infinite;
+        -moz-animation: css-carousel-fade-4 16s linear infinite;
+        -ms-animation: css-carousel-fade-4 16s linear infinite;
+        animation: css-carousel-fade-4 16s linear infinite;
+    }
+    .css-carousel-4 .css-img-4:nth-child(2) {
+        -webkit-animation-delay: 4s;
+        -moz-animation-delay: 4s;
+        -ms-animation-delay: 4s;
+        animation-delay: 4s;
+    }
+    .css-carousel-4 .css-img-4:nth-child(3) {
+        -webkit-animation-delay: 8s;
+        -moz-animation-delay: 8s;
+        -ms-animation-delay: 8s;
+        animation-delay: 8s;
+    }
+    .css-carousel-4 .css-img-4:nth-child(4) {
+        -webkit-animation-delay: 12s;
+        -moz-animation-delay: 12s;
+        -ms-animation-delay: 12s;
+        animation-delay: 12s;
+    }
+    @-webkit-keyframes css-carousel-fade-4 {
+        0% { opacity: 0; }
+        7.1%, 25% { opacity: 1; }
+        32.1%, 100% { opacity: 0; }
+    }
+    @-moz-keyframes css-carousel-fade-4 {
+        0% { opacity: 0; }
+        7.1%, 25% { opacity: 1; }
+        32.1%, 100% { opacity: 0; }
+    }
+    @-ms-keyframes css-carousel-fade-4 {
+        0% { opacity: 0; }
+        7.1%, 25% { opacity: 1; }
+        32.1%, 100% { opacity: 0; }
+    }
+    @keyframes css-carousel-fade-4 {
+        0% { opacity: 0; }
+        7.1%, 25% { opacity: 1; }
+        32.1%, 100% { opacity: 0; }
+    }
+    /*carousel plug-in for 4 images ====================================*/
+
+    /*carousel plug-in for 5 images ====================================*/
+    .css-carousel-5 {
+        width: 100%;
+        height: auto; /* Height of images */
+        position: relative;
+        clear: both;
+        float: left;
+    }
+
+    .css-img-5 {
+        display: inline;
+    }
+
+    .css-carousel-5 .css-img-5 {
+        position: absolute;
+        opacity: 0;
+        -webkit-animation: css-carousel-fade-5 20s linear infinite;
+        -moz-animation: css-carousel-fade-5 20s linear infinite;
+        -ms-animation: css-carousel-fade-5 20s linear infinite;
+        animation: css-carousel-fade-5 20s linear infinite;
+    }
+    .css-carousel-5 .css-img-5:nth-child(2) {
+        -webkit-animation-delay: 4s;
+        -moz-animation-delay: 4s;
+        -ms-animation-delay: 4s;
+        animation-delay: 4s;
+    }
+    .css-carousel-5 .css-img-5:nth-child(3) {
+        -webkit-animation-delay: 8s;
+        -moz-animation-delay: 8s;
+        -ms-animation-delay: 8s;
+        animation-delay: 8s;
+    }
+    .css-carousel-5 .css-img-5:nth-child(4) {
+        -webkit-animation-delay: 12s;
+        -moz-animation-delay: 12s;
+        -ms-animation-delay: 12s;
+        animation-delay: 12s;
+    }
+    .css-carousel-5 .css-img-5:nth-child(5) {
+        -webkit-animation-delay: 16s;
+        -moz-animation-delay: 16s;
+        -ms-animation-delay: 16s;
+        animation-delay: 16s;
+    }
+    @-webkit-keyframes css-carousel-fade-5 {
+        0% { opacity: 0; }
+        5.7%, 20% { opacity: 1; }
+        25.7%, 100% { opacity: 0; }
+    }
+    @-moz-keyframes css-carousel-fade-5 {
+        0% { opacity: 0; }
+        5.7%, 20% { opacity: 1; }
+        25.7%, 100% { opacity: 0; }
+    }
+    @-ms-keyframes css-carousel-fade-5 {
+        0% { opacity: 0; }
+        5.7%, 20% { opacity: 1; }
+        25.7%, 100% { opacity: 0; }
+    }
+    @keyframes css-carousel-fade-5 {
+        0% { opacity: 0; }
+        5.7%, 20% { opacity: 1; }
+        25.7%, 100% { opacity: 0; }
+    }
+}
+/*carousel plug-in for 5 images ====================================*/
+
+.main-sections video {
+	width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+
+
+
+
+

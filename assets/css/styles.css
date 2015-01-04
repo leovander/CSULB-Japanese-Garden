@@ -1,0 +1,1777 @@
+/*Global*/
+html {
+    -webkit-font-smoothing: antialiased;
+    font-family: "Open Sans";
+}
+
+body {
+    max-width: 970px;
+    margin: 0 auto;
+    line-height: 1.25;
+    padding: 0 1em 0 1em;
+}
+
+p {
+    letter-spacing: 1px;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+/*Header*/
+header {
+    margin: 0 0 4px 0;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header > #logo {
+    padding-right: 2em;
+    align-items: center;
+    vertical-align: middle;
+}
+
+/* header - Student project link */
+#student-project {
+    font-size: 0.7em;
+    text-align: center;
+    padding: 1em 0 1em 0;
+    border-top: 1px solid #00b2b7;
+    border-bottom: 1px solid #00b2b7;
+}
+
+/* header - Logo text */
+#logo span {
+    font-family: 'Lusitana', serif;
+    font-size: 2em;
+    font-weight: bold;
+    margin-left: 0.5em;
+    vertical-align: middle;
+}
+
+/* header - Logo image */
+#logo img {
+    box-shadow: 2px 2px 2px grey;
+    vertical-align: middle;
+    width: 50px;
+    height: auto;
+}
+
+/*Footer*/
+footer {
+    border-top: 1px solid lightgray;
+    padding: 2em 1em 1em 1em;
+    font-size: 0.8em;
+    color: grey;
+}
+
+#social-links {
+    list-style: none;
+    float: right;
+    display: inline-blockblock;
+}
+
+#social-links li {
+    margin-bottom: 15px;
+}
+
+#social-links li:before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+
+#social-links li:first-child:before {
+    background: url("http://www.csulb.edu/~itorres/cecs470/finalproject/assets/images/facebook_logo.png") no-repeat;
+}
+
+#social-links li:nth-child(2):before {
+    background: url("http://www.csulb.edu/~itorres/cecs470/finalproject/assets/images/twitter_logo.png") no-repeat;
+}
+
+#social-links li:last-child:before {
+    background: url("http://www.csulb.edu/~itorres/cecs470/finalproject/assets/images/instagram_logo.png") no-repeat;
+}
+
+/* footer - contact info and operation hours */
+#footer {
+    font-style: italic;
+}
+
+/* footer - operation hours */
+#operation-hours > ul {
+    /*font-size: 0.9em;*/
+    float: right;
+    list-style: none;
+    text-align: right;
+}
+
+/* footer - contact info */
+#contact-info {
+    text-align: left;
+}
+
+/* footer - copyright */
+#copyright {
+    text-transform: uppercase;
+    padding-top: 2.5em;
+    padding-bottom: 1em;
+    text-align: center;
+    font-size: 9px;
+    width: 100%;
+}
+
+/*Main Layout w/ Flex Box*/
+.navigation {
+    clear: left;
+    border-bottom: 1px lightgrey solid;
+    float: left;
+    width: 100%;
+}
+
+aside.navigation {
+    margin-bottom: 1em;
+}
+
+.navigation > ul {
+    list-style: none;
+    margin: 0;
+    padding-bottom: 0;
+    float: left;
+    clear: both;
+}
+
+.navigation > ul > li {
+    padding: 15px 0 3px 0;
+    margin: 0 30px 0 0;
+    float: left;
+    font-size: 1.15em;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.navigation a:visited {
+    color: #000000;
+}
+
+nav.navigation > ul > li.active {
+    font-weight: 600;
+}
+
+aside ul li {
+    font-size: 1.05em;
+}
+
+nav ul li a:hover {
+    border-bottom: 3px solid #993300;
+    margin-bottom: -3px;
+}
+
+nav ul li.active a {
+    border-bottom: 3px solid #993300;
+    margin-bottom: -3px;
+}
+
+aside ul li a:hover,
+aside ul li.active a {
+    border-bottom: 3px solid #ff5600;
+    margin-bottom: -3px;
+}
+
+/**** Overall elements ****/
+h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: dimgrey;
+    margin-top: -0.3em;
+    margin-bottom: 0.7em;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #993300;
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.0em;
+    color: #27408B;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: #993300;
+}
+
+.capitalized {
+    text-transform: uppercase;
+}
+
+figcaption {
+    font-size: 0.9em;
+    text-align: center;
+}
+
+dl {
+    margin-top: 1em;
+}
+
+/* Adding pdf-icon after and pdf file */
+a[href$='.pdf']:after {
+    content: url('http://www.csulb.edu/~gung/cecs470/cecs470-JP/assets/images/pdf-icon.png');
+    margin-left: 3px;
+}
+
+#teacher-resources a[href$='.pdf']:after {
+    content: none;
+}
+
+.filesize {
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+#gardenmap img, #gardenmap, #gardenmap figcaption {
+    width: auto;
+    text-align: center;
+    align-self: center;
+}
+
+#home {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+#home a {
+    text-decoration: none;
+}
+
+#home img, .left-panel-image img, .left-panel-images img, #tree-map img {
+    width: 100%;
+    height: auto;
+}
+
+.simple-caption {
+    bottom: 100px;
+    text-align: center;
+    margin-bottom: -47px;
+    padding: 10px 0;
+    font-size: 1.4em;
+    font-weight: bold;
+    background-color: #000;
+    color: #fff;
+    opacity: 0;
+    position: relative;
+    width: 100%;
+    display: block;
+    z-index: 1000;
+}
+
+.simple-caption span {
+    display: block;
+    font-size: 0.65em;
+    font-weight: normal;
+}
+
+#home a:focus p.simple-caption, #home a:hover p.simple-caption {
+    opacity: 0.75;
+    /*filter: alpha(opacity = 75);*/
+    -moz-transition: opacity 0.25s;
+    -webkit-transition: opacity 0.25s;
+    display: block;
+    z-index: 1001;
+}
+
+#garden {
+    margin-bottom: -1.3em;
+}
+
+#weddings {
+    margin-bottom: -0.999em;
+}
+
+#left-tiles {
+    float: left;
+    width: 48.8%;
+}
+
+#right-tiles {
+    float: right;
+    width: 49.1%;
+}
+
+#left-tiles, #right-tiles, #weddings, #membership, #education, #events, #garden {
+    overflow: hidden;
+}
+
+#education {
+    float: left;
+    width: 48.5%;
+}
+
+#events {
+    float: right;
+    width: 49.2%;
+}
+
+.wedding-prices td:last-child {
+    vertical-align: middle;
+}
+
+.left-panel-links p {
+    margin-bottom: .5em;
+    margin-top: 0;
+    font-weight: 600;
+    color: #993300;
+}
+
+.left-panel-links ul li {
+    list-style: none;
+    font-weight: 400;
+    margin: 0 0 .5em 0;
+}
+
+.left-panel-links ul li a {
+    text-decoration: none;
+    text-transform:capitalize;
+    color: black;
+    border-bottom: 1px solid #ff5600;
+    margin-bottom: -3px;
+}
+
+.left-panel-links ul li a:hover {
+    border-bottom: 3px solid #ff5600;
+    color: #993300;
+    margin-bottom: 1.5em;
+}
+
+.small-sidenav, .large-sidenav, .text-sidenav, .grid-sidenav, .no-sidenav {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.small-sidenav .left-panel-image, .small-sidenav .left-panel-links, .text-sidenav .left-panel-links, .grid-sidenav .left-panel-links {
+    clear: left;
+    float: left;
+    width: 30%;
+}
+
+.large-sidenav .left-panel-image, .large-sidenav .left-panel-links {
+    clear: left;
+    float: left;
+    width: 65.8%;
+}
+
+.grid-sidenav .left-panel-images {
+    width: 66%;
+    float: left;
+    margin-bottom: 1em;
+}
+
+.grid-sidenav .left-panel-images figure:first-child {
+    margin-bottom: 1em;
+}
+
+.grid-sidenav .left-panel-images figure:nth-child(2) {
+    clear: left;
+    float: left;
+    width: 48%;
+}
+
+.grid-sidenav .left-panel-images figure:last-child {
+    float: right;
+    width: 48%;
+    margin-left: 0.5em;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.left-panel-image figure {
+    margin-bottom: 1em;
+}
+
+.small-sidenav .right-panel, .text-sidenav .right-panel {
+    clear: right;
+    float: right;
+    width: 66%;
+}
+
+.large-sidenav .right-panel {
+    clear: right;
+    float: right;
+    width: 30.4%;
+}
+
+.text-sidenav .right-panel {
+    clear: right;
+    float: right;
+    width: 66%;
+}
+
+.grid-sidenav .right-panel {
+    float: right;
+    padding-left: 0.5em;
+    width: 30%;
+}
+
+.right-panel .left-panel-links {
+    width: auto;
+}
+
+.image-and-content {
+    display: inline-block;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+.image-and-content h1 {
+    width: 66.4%;
+    float: right;
+}
+
+div.image-and-content:first-child {
+    margin-bottom: 0;
+}
+
+.image-and-content img {
+    clear: both;
+    float: left;
+    width: 30%;
+    height: auto;
+}
+
+.image-and-content section {
+    float: right;
+    width: 66.4%;
+}
+
+.image-and-content section p:first-child{
+    margin-top: 0;
+}
+
+.content-only {
+    float: right;
+    width: 66%;
+    clear: both;
+    padding-left: 1.5em;
+    margin-bottom: 1em;
+}
+
+.full {
+    width: 100%;
+}
+
+.image-right img {
+    clear: both;
+    float: right;
+    margin-bottom: 1em;
+    width: 30%;
+}
+
+.image-right section {
+    float: left;
+    padding-right: 1.5em;
+    padding-left: 0em;
+    width: 64.4%;
+}
+
+#tree-map {
+    clear: both;
+}
+
+blockquote p:before, blockquote p:after {
+    content: "\"";
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 3px solid #e9322b;
+    padding-left: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+ul li, ol li {
+    margin-left: 2em;
+}
+
+ul#rulelist  li {
+    margin-bottom: 0.5em;
+}
+
+ul:not(#benefits-table ul) {
+    padding-bottom: 5px;
+}
+
+/*** Form validation Styling ***/
+/* Invalid input, */
+input:invalid {
+    color: red;
+}
+
+/* excluding date (b/c date shows as invalid on load) */
+input[type="date"]:invalid {
+    color: grey;
+}
+
+/* Valid input */
+input:valid, input[type="date"]:valid {
+    color: green;
+}
+
+/* input date placeholder color */
+input[type="date"] {
+    color: grey;
+    font-family: inherit;
+}
+
+/* Add a red asterisk to required fields */
+.req:after {
+    content: " *";
+    color: red;
+}
+
+.asterisk {
+    color: red;
+}
+
+/* Superscript */
+sup {
+    vertical-align: super;
+    font-size: 0.7em;
+}
+
+/* Forcing placeholder of input to be consistently grey*/
+*::-webkit-input-placeholder { /* WebKit browsers */
+    color: grey;
+}
+*:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: grey;
+}
+*::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: grey;
+}
+*:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: grey;
+}
+
+input.error {
+    border: 1px solid red;
+}
+
+label.error {
+    background: url('http://www.csulb.edu/~gung/cecs470/cecs470-JP/assets/images/unchecked.gif') no-repeat;
+    padding-left: 16px;
+    margin-left: .3em;
+    margin-bottom: 0.5em;
+    display: block;
+    font-style: italic;
+    color: red;
+    font-size: 0.8em;
+    font-weight: 100;
+}
+
+label.valid {
+    background: url('http://www.csulb.edu/~gung/cecs470/cecs470-JP/assets/images/checked.gif') no-repeat;
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+
+#signature {
+    background-color: #efefef;
+}
+
+#volunteerRadioGroup div.radiogroup {
+    display: block;
+}
+
+#volunteers table, #contacts table, #ratings table {
+    font-size: 0.9em;
+}
+
+#cardRadioGroup div.radiogroup, #yesno div.radiogroup {
+    display: inline;
+}
+
+#benefits-table th:first-child {
+    width: 20%;
+}
+
+#benefits-table th:nth-child(2) {
+    width: 15%;
+}
+
+#benefits-table th:last-child {
+    width: 65%;
+}
+
+#benefits-table th:nth-child(2), #benefits-table td:nth-child(2) {
+    text-align: right;
+    padding-right: 2em;
+}
+
+#closure-table th:first-child {
+    width: 25%;
+}
+
+#closure-table th:nth-child(2) {
+    width: 25%;
+}
+
+#closure-table th:last-child {
+    width: 50%;
+}
+
+#garden-hours caption,
+#closure-table > caption {
+    color: #993300;
+}
+
+#operating-hours-table {
+    margin-bottom: 2em;
+}
+
+#events-date-time-wrapper {
+    display: block;
+    margin-bottom: 1em;
+    font-weight: 600;
+}
+
+#calendar-wrapper .fc-event-inner:hover {
+    cursor: pointer;
+    cursor: hand;
+}
+
+/* Hid mobile calendar when JS is disabled */
+#mobile-calendar{
+    display: none;
+}
+
+/* Event detail haeder */
+#event-detail h1 {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #993300;
+    margin-bottom: 0.7em;
+}
+
+#event-detail ul {
+    width: 60%;
+    margin: auto;
+}
+
+#event-detail ul li {
+    list-style: none;
+    font-weight: 600;
+    margin: 0;
+}
+
+#event-detail span:first-of-type {
+    display: block;
+    font-weight: 700;
+}
+
+#event-detail ul li:first-child {
+    float: left;
+}
+
+#event-detail ul li:last-child {
+     float: right;
+}
+
+fieldset#membership, fieldset#volunteer,
+fieldset.profile, fieldset#acceptance,
+fieldset#siterating, fieldset#gardenstaffrating,
+fieldset#vendorrating {
+    margin-top: 1em;
+    width: 100%;
+}
+
+fieldset#submit {
+    margin: 1em 0 1em 0;
+}
+
+form {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1.5em;
+}
+
+legend {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    margin-left: -1.5em;
+}
+
+select#membershipLevel, select[required="required"] {
+    display: block;
+    background: none;
+    padding: 4px 25px 4px 4px;
+    width: auto;
+    height: 2.0em;
+    font-size: 1em;
+    margin-bottom: 1em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px black;
+    -webkit-appearance: none;
+    appearance: none;
+    /* FireFox workaround to hide default select element*/
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    -webkit-border-radius: 0px;
+    background: transparent url("http://www.csulb.edu/~gung/cecs470/cecs470-JP/assets/images/down_arrow.png") no-repeat right center;
+}
+
+select[name="treeListTable_length"] {
+    display: inline;
+}
+
+input[name="card[]"] {
+    float: none;
+    display: inline;
+    height: 1.5em;
+    width: 5em;
+}
+
+label[for="accept"], label[for="decline"] {
+    font-weight: 600;
+}
+
+p#footnote {
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+@media all and (max-width: 680px) {
+    fieldset#membership, fieldset#volunteer,
+    fieldset.profile, fieldset#acceptance,
+    fieldset#siterating {
+        border: none;
+        margin-top: 1em;
+        margin-left: 0em;
+        width: 100%;
+    }
+
+    legend {
+        padding: 0;
+        margin-bottom: 0.5em;
+        font-weight: bold;
+        margin-left: -1.5em;
+    }
+
+    /* Hide JS calendar in mobile browser */
+    #calendar{
+        display: none;
+    }
+
+    /* Show mobile calendar in mobile browser */
+    #mobile-calendar{
+        display: block;
+    }
+}
+
+input[type="submit"], input[type="reset"], button#delete, button.img-delete, #logout {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: black;
+    background-color: white;
+    border: solid 1px darkgrey;
+    width: auto;
+    height: 2.5em;
+    font-size: 1em;
+    margin-right: 40px;
+    padding: 0 1em 0 1em;
+    text-align: center;
+}
+
+input[type="submit"]:hover {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: solid 1px white;
+    color: white;
+    background-color: #2ba992;
+}
+
+/* Admin login page */
+h1#admin {
+    padding-top: 1.5em;
+}
+
+#login ul li {
+    list-style: none;
+    margin: 0;
+}
+
+#login label {
+    width: 15%;
+    vertical-align: bottom;
+}
+
+#login input[type="text"],
+#login input[type="password"]{
+    width: 25%;
+    height: 2em;
+    margin-left: 0.5em;
+    font-size: 1em;
+    border: none;
+    border-bottom: solid 1px black;
+    clear: both;
+}
+
+#login input[type="submit"] {
+    margin-top: 1em;
+}
+
+/* Centering the photp delete button */
+#photos-viewport button.img-delete {
+    margin: auto;
+}
+
+/* #tabs is the Admin Calendar container */
+/* display as block to locate the "logout" button on far right */
+#tabs {
+    display: block;
+    clear: both;
+}
+
+#logout {
+    float: right;
+    line-height: 2em;
+    margin-bottom: 1em;
+    margin-top: -2em;
+}
+
+#logout a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    margin-bottom: 1.5em;
+}
+
+#logout:hover a {
+    text-decoration: none;
+    color: white;
+}
+
+input[type="reset"]:hover, button#delete:hover, button.img-delete:hover, #logout:hover {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: solid 1px white;
+    color: white;
+    background-color: #f43917;
+}
+
+.success-message {
+    color: green;
+}
+
+.error-message {
+    color: #f43917;
+}
+
+#open-day, #close-day {
+    float: right;
+    padding: 15px 0 3px 0;
+    font-size: 0.9em;
+    font-weight: 600;
+    font-style: italic;
+}
+
+#open-day {
+    color: #2ba992;
+}
+
+#close-day {
+    color: #f43917;
+}
+
+@media only screen and (max-width: 680px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+    #open-day, #close-day {
+        display: none;
+    }
+}
+
+.profile ul li, #payment ul li, #siterating ul li {
+    list-style: none;
+    margin-left: 0;
+    padding-bottom: 0.5em;
+}
+
+.profile ul li label,
+#payment ul li label {
+    width: 85%;
+    float: left;
+}
+
+.profile ul li input,
+#payment ul li input {
+    width: 95%;
+    height: 2em;
+    font-size: 1em;
+    float: left;
+    border: none;
+    border-bottom: solid 1px black;
+    clear: both;
+}
+
+.profile ul li.left  {
+    float: left;
+    clear: left;
+    width: 50%;
+}
+
+label.hide {
+    display: none;
+}
+
+#siterating ul li:first-child > dl {
+    margin-top: 0em;
+}
+
+#gardenstaffrating ol, #vendorrating ol {
+    margin-left: -1.5em;
+}
+
+#vendorrating ol li {
+    float: left;
+    width: 100%;
+}
+
+#vendorrating ol li div {
+    width: 95%;
+}
+
+#vendorrating ol li label {
+    /*float: left;*/
+}
+
+#vendorrating ol li input {
+    float: left;
+    clear: left;
+    width: 65%;
+    height: 2em;
+    font-size: 1em;
+    border: none;
+    border-bottom: solid 1px black;
+}
+
+#vendorrating ol li input[type="radio"] {
+    width: auto;
+}
+
+#vendorrating ol li select {
+    float: right;
+    clear: right;
+}
+
+#gardenstaffrating ol li {
+    line-height: 2.5em;
+    width: 95%;
+}
+
+#gardenstaffrating ol li select {
+    float: right;
+    clear: right;
+    margin-bottom: 0;
+}
+
+.profile ul li.right {
+    float: right;
+    clear: none;
+    width: 50%;
+}
+
+.profile ul li.whole, #payment ul li.whole {
+    float: left;
+    clear: left;
+    width: 100%;
+}
+
+.profile ul li.right label,
+.profile ul li.right input {
+    margin-left: 1em;
+}
+
+.profile ul li.whole label,
+.profile ul li.whole input,
+#payment ul li.whole label,
+#payment ul li.whole input {
+    width: 100%;
+}
+
+#payment ul li#credit label,
+#payment ul li#credit input,
+#vendorrating ol li#yesno label,
+#vendorrating ol li#yesno input {
+    display: inline;
+    float: none;
+    clear: none;
+    width: auto;
+}
+
+#payment ul li#credit label,
+#vendorrating ol li#yesno label {
+    margin-right: 2em;
+}
+
+textarea#comment {
+    float: left;
+    height: 10em;
+    width: 100%;
+    font-size: 1em;
+}
+
+#vendorrating textarea#comment {
+    width: 94%;
+}
+
+p.vcard {
+    font-weight: 600;
+}
+
+/* float the map to the right - keep it large */
+figure#directions-map img {
+    float: right;
+    margin-top: 1em;
+}
+
+.redd {
+    background-color: red;
+    color: white;
+}
+
+#submit-events-container {
+    float: left;
+}
+
+.event {
+    background-color: lightskyblue;
+    color: white;
+    font-weight: bold;
+    font-size: 90%;
+}
+
+.closure {
+    background-color: #ff7373;
+    color: white;
+    font-weight: bold;
+    font-size: 90%;
+}
+
+/* General table */
+table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+}
+
+tr, td {
+    padding: 0.3em 1em 0.3em 0;
+    text-align: left;
+}
+
+th {
+    font-weight: 600;
+    text-align: left;
+    border-bottom: 2px solid lightgrey;
+}
+
+tfoot tr td {
+    text-align: center;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+table ul li {
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: 0.5em;
+}
+
+/* Table sub-header*/
+th[colspan="3"] {
+    color: #993300;
+    text-align: left;
+    letter-spacing: 0.15em;
+    border-bottom: none;
+    padding: 5px 0 5px 0;
+    border-bottom: solid 1px lightgrey;
+}
+
+/* Widen first column to fit more content */
+#teacher-resources td:first-child {
+    width: 35%;
+}
+
+#treeListTable th, #treeListTable tr, #treeListTable td {
+    padding-left: 0.5em;
+}
+
+#treeListTable th:first-child, #treeListTable td:first-child {
+
+    width: 8%;
+    text-align: right;
+    padding-right: 1em;
+}
+
+#treeListTable tr:nth-child(even) {
+    background: #efefef;
+}
+
+#treemap > figcaption {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #993300;
+}
+
+figure#treemap img {
+    width: 100%;
+}
+
+figure#donate-icon img, figure#najgi-logo img {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* The Living Collection page */
+div#treeListTable_wrapper {
+    margin-top: 1em;
+}
+
+#treeListTable_filter {
+    width: 40%;
+}
+
+#treeListTable_filter > label > input[type="search"] {
+    width: 20em;
+    height: 1.5em;
+}
+
+/* The Living Collection pictures */
+figure#right-pic img {
+    float: right;
+    margin-left: 1em;
+}
+
+figure#left-pic img {
+    float: left;
+    margin-right: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* Teacher resources table and Benefits Table in mobile view */
+@media only screen and (max-width: 680px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+
+/*** Teacher resources table and member benefits table ***/
+    /* Force table to not be like tables anymore */
+    .responsive-table thead,
+    .responsive-table tbody,
+    .responsive-table th,
+    .responsive-table td,
+    .responsive-table tr {
+        display: block;
+    }
+
+    .responsive-table caption {
+        display: table;
+        width: 100%;
+        text-align: center;
+    }
+
+    .responsive-table tfoot tr td {
+        display: table-row;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    .responsive-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+/**Specific CSS for #teacher-resources table **/
+    /*Line separate each block of grade level */
+    #teacher-resources th {
+        border-top: solid 2px darkgrey;
+    }
+
+    /* Reset spacing from desktop styling */
+    #teacher-resources td:first-child {
+        width: 100%;
+    }
+
+    #teacher-resources td {
+        border: none;
+        position: relative;
+        padding-left: 35%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    #teacher-resources td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: 600;
+    }
+
+    /*Label the data in #teacher-resources table*/
+    #teacher-resources td:nth-of-type(1):before {
+        content: "Before";
+    }
+
+    /*Eliminate the "Before" in front of td in tfoot*/
+    #teacher-resources td#no-content:before {
+        content: "";
+    }
+
+    #teacher-resources td:nth-of-type(2):before {
+        content: "During";
+    }
+
+    #teacher-resources td:nth-of-type(3):before {
+        content: "After";
+    }
+
+/**Specific CSS for #benfits-table **/
+    /*Line separate each block of membership type and closure date */
+    #benefits-table tr,
+    #closure-table tr {
+        border-top: solid 2px darkgrey;
+    }
+
+    /* Line above Amount (Membership benefits table) and Date (Garden closure table) */
+    #benefits-table th:nth-child(2), #benefits-table td:nth-child(2),
+    #closure-table th:nth-child(2), #closure-table td:nth-child(2) {
+        text-align: left;
+        border-top: solid 1px lightgrey;
+    }
+
+    /* Remove padding right to line up the columns */
+    #benefits-table tr, #benefits-table td,
+    #closure-table tr, #closure-table td {
+        padding-right: 0;
+    }
+
+    #benefits-table tr,
+    #closure-table tr {
+        text-align: left;
+    }
+
+    #benefits-table td {
+        /* Behave  like a "row" */
+        border: none;
+        position: relative;
+        padding-left: 30%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: left;
+    }
+
+    #benefits-table td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 65%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: 600;
+    }
+
+    /*Label the data in #benefits-table */
+    #benefits-table td:nth-of-type(1):before {
+        content: "Title";
+    }
+
+    #benefits-table td:nth-of-type(2):before {
+        content: "Amount";
+    }
+
+    #benefits-table td:nth-of-type(3):before {
+        content: "Benefits";
+    }
+
+    /* Membership form */
+    #cardRadioGroup div.radiogroup {
+        display: block;
+    }
+
+    /* Volunteer form */
+    #volunteerRadioGroup {
+        margin-left: -0.5em;
+    }
+
+/*Closure table specific style */
+    #closure-table td {
+        /* Behave  like a "row" */
+        border: none;
+        position: relative;
+        padding-left: 35%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: left;
+    }
+
+    #closure-table td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 60%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: 600;
+    }
+
+    /*Label the data in #benefits-table */
+    #closure-table td:nth-of-type(1):before {
+        content: "Day of Week";
+    }
+
+    #closure-table td:nth-of-type(2):before {
+        content: "Date";
+    }
+
+    #closure-table td:nth-of-type(3):before {
+        content: "Occasion";
+    }
+
+     /*The Living Collection*/
+    #treeListTable_filter {
+        width: 100%;
+    }
+
+    div#treeListTable_wrapper {
+        font-size: 80%;
+    }
+
+    #treeListTable {
+        width: 100%;
+    }
+
+    #treeListTable_filter > label > input[type="search"] {
+        width: 80%;
+        height: 1.5em;
+    }
+
+    figure#right-pic img {
+        width: 100%;
+        float: none;
+        margin: 1em 0 1em 0;
+    }
+
+    figure#left-pic img {
+        width: 100%;
+        float: none;
+        margin: 1em 0 1em 0;
+    }
+
+    .profile ul li {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .profile ul li label,
+    .profile ul li input,
+    .profile ul li.whole label,
+    .profile ul li.whole input,
+    #payment ul li.whole label,
+    #payment ul li.whole input {
+        width: 94%;
+        float: left;
+        clear: left;
+    }
+
+    .profile ul li.left,
+    .profile ul li.right {
+        float: none;
+        clear: none;
+        width: 100%;
+        /*padding-bottom: 0.5em;*/
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .profile ul li.right label, .profile ul li.right input {
+        margin-left: 0em;
+    }
+
+    .profile ul li label {
+        padding-top: 0.7em;
+    }
+
+    textarea#comment {
+        width: 94%;
+    }
+
+    #vendorrating textarea#comment {
+        width: 90%;
+    }
+
+    /* comment card */
+    #gardenstaffrating ol li, #vendorrating ol li {
+        line-height: normal;
+        margin-bottom: 1em;
+        width: 94%;
+    }
+
+    #gardenstaffrating ol li select {
+        float: none;
+        line-height: normal;
+        margin-bottom: 1em;
+    }
+
+    #vendorrating ol li input {
+        width: 94%;
+    }
+
+    #vendorrating ol li select {
+        float: left;
+    }
+}
+
+@media all and (max-width: 680px) {
+    .navigation > ul {
+        list-style: none;
+        margin: 0 auto 0 auto;
+        padding: 0;
+        width: 100%;
+        float: none;
+
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -webkit-flex;
+        display: flex;
+
+        -moz-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+
+        justify-content: space-around;
+        justify-content: -webkit-space-around;
+        justify-content: -moz-space-around;
+        justify-content: -ms-space-around;
+    }
+
+    .navigation > ul > li {
+        text-align: center;
+        margin: 0;
+    }
+
+    nav > ul > li {
+        width: 33%;
+    }
+
+    nav > ul > li:first-child {
+        width: 100%;
+        border-bottom: 1px solid lightgrey;
+        letter-spacing: 0.15em;
+    }
+
+    nav > ul > li:first-child a, nav > ul > li:first-child a:visited {
+        color: #993300;
+    }
+
+    nav > ul > li:nth-child(2), nav > ul > li:nth-child(5){
+        text-align: left;
+    }
+
+    nav > ul > li:nth-child(4), nav > ul > li:nth-child(7){
+        text-align: right;
+    }
+
+    aside.navigation > ul > li {
+        width: 50%;
+        font-size: 1.09em;
+    }
+
+    aside > ul > li:nth-child(2n + 1) {
+        text-align: left;
+    }
+
+    aside > ul > li:nth-child(2n) {
+        text-align: right;
+    }
+
+    #oddSubNav {
+        text-align: center;
+        width:100%;
+    }
+
+    /* resize the logo text */
+    #logo span {
+        font-family: 'Lusitana', serif;
+        font-size: 1.5em;
+        font-weight: bold;
+        vertical-align: middle;
+        text-align: left;
+        margin-left: 0;
+    }
+
+    /*resize top logo to fit two rows of logo text */
+    #logo img {
+        box-shadow: 2px 2px 2px grey;
+        resize: both;
+        width: 40px;
+        height: auto;
+        vertical-align: middle;
+        float: left;
+        clear: both;
+        margin-right: 0.7em;
+    }
+
+    /*resize all images on home page to 100% to fit width */
+    #home {
+        width: 100%;
+        height: 100%;
+    }
+
+    #garden {
+        /*#weddings,*/
+        /*#membership,*/
+        /*#events,*/
+        /*#education {*/
+        float: none;
+        width: auto;
+        max-width: 100%;
+        height: 100%;
+        /*padding: 10px;*/
+    }
+
+    #garden > a > img {
+        /*#weddings > a > img,*/
+        /*#membership > a > img,*/
+        /*#events > a > img,*/
+        /*#education > a > img {*/
+        /*float: none;*/
+        width: 100%;
+        height: 100%;
+    }
+
+    p.simple-caption {
+        display: none;
+    }
+
+    .small-sidenav, .large-sidenav, .text-sidenav, .grid-sidenav, .no-sidenav {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: flex;
+
+        -webkit-flex-flow: column;
+        -moz-flex-flow: column;
+        -ms-flex-flow: column;
+        flex-flow: column;
+    }
+
+    #home div div {
+        margin-bottom: 0.5em;
+    }
+
+    #home a:focus p.simple-caption, #home a p.simple-caption {
+         opacity: 0.75;
+         -moz-transition: opacity 0.25s;
+         -webkit-transition: opacity 0.25s;
+         display: block;
+         z-index: 1001;
+    }
+
+    #left-tiles {
+        float: none;
+        width: 100%;
+    }
+
+    #right-tiles {
+         float: none;
+         width: 100%;
+    }
+
+    #garden {
+         float: none;
+         width: auto;
+         max-width: 100%;
+         height: 100%;
+     }
+
+    .simple-caption span {
+        display: none;
+    }
+
+    .small-sidenav .left-panel-image, .large-sidenav .left-panel-image, .grid-sidenav .left-panel-images {
+        -moz-flex: 1;
+        -ms-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        order: 1;
+        -moz-order: 1;
+        -ms-order: 1;
+        -webkit-order: 1;
+        width: inherit;
+    }
+
+    .small-sidenav .left-panel-links, .large-sidenav .left-panel-links, .grid-sidenav .left-panel-links {
+        -webkit-flex: 1;
+        -moz-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        order: 3;
+        -moz-order: 3;
+        -ms-order: 3;
+        -webkit-order: 3;
+        width: inherit;
+    }
+
+    .text-sidenav .left-panel-links {
+        -webkit-flex: 1;
+        -moz-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        width: inherit;
+    }
+
+    .small-sidenav .right-panel, .large-sidenav .right-panel {
+        -webkit-flex: 1;
+        -moz-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        order: 2;
+        -moz-order: 2;
+        -ms-order: 2;
+        -webkit-order: 2;
+        width: inherit;
+        padding-left: 0em;
+    }
+
+    .text-sidenav .right-panel {
+        -webkit-flex: 1;
+        -moz-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        width: inherit;
+        padding-left: 0em;
+    }
+
+    .grid-sidenav .right-panel {
+        -webkit-flex: 1;
+        -moz-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        order: 2;
+        -moz-order: 3;
+        -ms-order: 3;
+        -webkit-order: 3;
+        width: inherit;
+        padding-left: 0em;
+    }
+
+    .image-and-content, .content-only {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: flex;
+
+        -webkit-flex-flow: column;
+        -moz-flex-flow: column;
+        -ms-flex-flow: column;
+        flex-flow: column;
+    }
+
+    .image-and-content img, .image-and-content section, .content-only {
+        width: 100%;
+        float: none;
+    }
+
+    .image-and-content section, .content-only {
+        padding-left: 0em;
+    }
+
+    #footer {
+        font-size: 0.75em;
+    }
+
+    /* Direction map */
+    figure#directions-map img {
+        width: 100%;
+    }
+}
+
+/*Credit page*/
+.left-panel-links dd {
+    margin-bottom: 3px;
+}
+
+.left-panel-links dt {
+	color: #993300;
+	font-weight: bold;
+	margin-bottom: 3px;
+	margin-top: 8px;
+}
+
+#credits li {
+	margin-bottom: 3px;
+}
+
+.credits-li {
+	font-weight: bold;
+	margin-bottom: 3px;
+	margin-top: 8px;
+}
+
+.credits-ul {
+	font-weight: normal;
+}
+
+

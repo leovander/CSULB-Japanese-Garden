@@ -1,0 +1,213 @@
+#student-project,
+.navigation,
+.left-panel-image,
+.left-panel-links,
+#benefits-table,
+#footnote,
+input[type="submit"],
+input[type="reset"],
+#submit > legend,
+label.error,
+label.valid,
+#cardRadioGroup > label,
+footer
+{
+    display: none;
+}
+
+html {
+    margin: 1em 1em;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Open Sans";
+    font-size: 54%;
+}
+
+.small-sidenav {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+section #logo {
+    height: 10%;
+}
+
+.small-sidenav .right-panel {
+    float: none;
+    width: 80%;
+}
+
+header {
+    padding-bottom: 1.5em;
+}
+
+section#logo img {
+    box-shadow: none;
+    vertical-align: middle;
+    width: 20px;
+    height: auto;
+}
+
+section#logo span {
+    font-family: 'Lusitana', serif;
+    font-size: 2em;
+    font-weight: bold;
+    margin-left: 0.5em;
+    margin-top: 1em;
+    vertical-align: middle;
+}
+
+h1 {
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-top: -0.3em;
+    margin-bottom: 0.7em;;
+}
+
+h2 {
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+}
+
+p {
+    letter-spacing: 1px;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+select#membershipLevel {
+    display: inline;
+    font-size: 1.2em;
+}
+
+#payment input[name="cardtype"],
+#acceptRadioGroup input[name="accept"]{
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    -ms-appearance: checkbox;     /* not currently supported */
+    -o-appearance: checkbox;
+}
+
+.profile ul li, #payment ul li, #siterating ul li {
+    list-style: none;
+    margin-left: 0;
+    padding-bottom: 0.5em;
+}
+
+.profile ul li label,
+#payment ul li label {
+    width: 85%;
+    float: left;
+}
+
+.profile ul li input,
+#payment ul li input {
+    width: 95%;
+    height: 2em;
+    font-size: 1em;
+    float: left;
+    border: none;
+    border-bottom: solid 1px black;
+    clear: both;
+}
+
+.profile ul li.left  {
+    float: left;
+    clear: left;
+    width: 50%;
+}
+
+.profile ul li.right {
+    float: right;
+    clear: none;
+    width: 50%;
+}
+
+.profile ul li.whole, #payment ul li.whole {
+    float: left;
+    clear: left;
+    width: 100%;
+}
+
+.profile ul li.right label,
+.profile ul li.right input {
+    margin-left: 1em;
+}
+
+.profile ul li.whole label,
+.profile ul li.whole input,
+#payment ul li.whole label,
+#payment ul li.whole input {
+    width: 100%;
+}
+
+#payment ul li#credit label,
+#payment ul li#credit input,
+#vendorrating ol li#yesno label,
+#vendorrating ol li#yesno input {
+    display: inline;
+    float: none;
+    clear: none;
+    width: auto;
+}
+
+#payment ul li#credit label,
+#vendorrating ol li#yesno label {
+    margin-right: 2em;
+}
+#payment > ul > li:nth-child(1) {
+    float: left;
+    clear: left;
+    width: 47.5%;
+}
+
+#payment > ul > li:nth-child(2) {
+    margin-left: 1em;
+    float: right;
+    clear: none;
+    width: 48%;
+}
+
+#payment > ul > li:nth-child(3) {
+    float: left;
+    clear: left;
+    width: 47.5%;
+}
+
+#payment > ul > li:nth-child(4) {
+    margin-left: 1em;
+    float: right;
+    clear: none;
+    width: 48%;
+}
+
+
+
+#payment ul li#credit label,
+#payment ul li#credit input,
+#vendorrating ol li#yesno label,
+#vendorrating ol li#yesno input {
+    display: inline;
+    float: none;
+    clear: none;
+    width: auto;
+}
+
+#cardRadioGroup div.radiogroup, #yesno div.radiogroup {
+    display: inline;
+}
+
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: transparent;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: transparent;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: transparent;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: transparent;
+}
